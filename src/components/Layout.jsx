@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import List from "./List";
 import Search from "./Search";
+import TodoList from "./TodoList";
+import AddTodoItem from "./AddTodoItem";
 
 const initData = ["Text 1", "Text 2", "Text 3"];
 
@@ -24,6 +26,10 @@ const Layout = () => {
         Find:
       </Search>
       <List items={data} />
+      {"---------------------------------------------"}
+      <br />
+      <AddTodoItem />
+      <TodoList />
     </>
   );
 };
