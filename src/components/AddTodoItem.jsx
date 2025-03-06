@@ -12,6 +12,7 @@ const AddTodoItem = () => {
         type="text"
         value={task}
         onChange={(e) => setTask(e.target.value)}
+        data-testid="redux textbox"
       />
       <button onClick={() => dispatch(addTodo(task))}>Add</button>
     </>

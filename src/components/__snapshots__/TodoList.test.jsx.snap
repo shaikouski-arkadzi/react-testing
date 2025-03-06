@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TodoList Component > matches the snapshot 1`] = `
+<DocumentFragment>
+  <ul />
+</DocumentFragment>
+`;

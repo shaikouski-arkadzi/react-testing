@@ -1,8 +1,14 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { Provider } from "react-redux";
+import store from "./store/store";
 import App from "./App";
 
 test("рендерит App и проверяет основные элементы", () => {
-  render(<App />);
+  render(
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
 
   // Проверяем заголовок
   expect(screen.getByText(/Vite \+ React/i)).toBeInTheDocument();
@@ -25,5 +31,11 @@ test("рендерит App и проверяет основные элемент
 });
 
 test("App snapshot", () => {
-  expect(render(<App />)).toMatchSnapshot();
+  expect(
+    render(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    )
+  ).toMatchSnapshot();
 });

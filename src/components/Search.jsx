@@ -7,6 +7,7 @@ const Search = ({ value, onChange, children, placeholder }) => {
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        data-testid="search textbox"
       />
     </label>
   );
