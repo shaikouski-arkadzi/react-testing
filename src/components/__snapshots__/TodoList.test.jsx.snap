@@ -5,3 +5,55 @@ exports[`TodoList Component > matches the snapshot 1`] = `
   <ul />
 </DocumentFragment>
 `;
+
+exports[`TodoList Component > should create TodoList with todo items 1`] = `
+<DocumentFragment>
+  <ul>
+    <li>
+      <input
+        type="checkbox"
+      />
+      task 1
+      <button>
+        ×
+      </button>
+    </li>
+    <li>
+      <input
+        checked=""
+        type="checkbox"
+      />
+      task 2
+      <button>
+        ×
+      </button>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`TodoList Component > should create TodoList with todo items alternative test 1`] = `
+<DocumentFragment>
+  <ul>
+    <li>
+      <input
+        type="checkbox"
+      />
+      task 1
+      <button>
+        ×
+      </button>
+    </li>
+    <li>
+      <input
+        checked=""
+        type="checkbox"
+      />
+      task 2
+      <button>
+        ×
+      </button>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
