@@ -12,7 +12,12 @@ const TodoItem = ({ id, text, completed }) => {
         onChange={() => dispatch(toggleComplete(id))}
       />
       {text}
-      <button onClick={() => dispatch(removeTodo(id))}>&times;</button>
+      <button
+        data-testid="remove item"
+        onClick={() => dispatch(removeTodo(id))}
+      >
+        &times;
+      </button>
     </li>
   );
 };

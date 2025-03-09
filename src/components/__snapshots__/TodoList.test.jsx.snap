@@ -14,7 +14,9 @@ exports[`TodoList Component > should create TodoList with todo items 1`] = `
         type="checkbox"
       />
       task 1
-      <button>
+      <button
+        data-testid="remove item"
+      >
         ×
       </button>
     </li>
@@ -24,7 +26,9 @@ exports[`TodoList Component > should create TodoList with todo items 1`] = `
         type="checkbox"
       />
       task 2
-      <button>
+      <button
+        data-testid="remove item"
+      >
         ×
       </button>
     </li>
@@ -40,7 +44,9 @@ exports[`TodoList Component > should create TodoList with todo items alternative
         type="checkbox"
       />
       task 1
-      <button>
+      <button
+        data-testid="remove item"
+      >
         ×
       </button>
     </li>
@@ -50,7 +56,9 @@ exports[`TodoList Component > should create TodoList with todo items alternative
         type="checkbox"
       />
       task 2
-      <button>
+      <button
+        data-testid="remove item"
+      >
         ×
       </button>
     </li>
