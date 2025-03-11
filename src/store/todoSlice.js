@@ -64,9 +64,13 @@ const todoSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchTodos.fulfilled, (state, action) => {
-      return action.payload;
-    });
+    builder
+      .addCase(fetchTodos.fulfilled, (state, action) => {
+        return action.payload;
+      })
+      .addCase(addTodos.fulfilled, (state, action) => {
+        state.push(action.payload);
+      });
   },
 });
 
