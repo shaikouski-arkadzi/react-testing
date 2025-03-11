@@ -18,4 +18,18 @@ describe("todoThunk", () => {
     ]);
     expect(thunk.type).toBe("todos/fetch/fulfilled");
   });
+
+  it("should handle fetch error", async () => {
+    fetch.mockResolvedValueOnce({
+      ok: false,
+    });
+
+    const dispatch = vi.fn();
+    const getState = vi.fn();
+    const response = await fetchTodos()(dispatch, getState, undefined);
+
+    expect(response.payload).toBe("Can't fetch");
+    expect(response.type).toBe("todos/fetch/rejected");
+    expect(response.meta.rejectedWithValue).toBe(true);
+  });
 });
