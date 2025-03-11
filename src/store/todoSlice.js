@@ -35,6 +35,11 @@ const todoSlice = createSlice({
       return state.filter((todo) => todo.id !== action.payload);
     },
   },
+  extraReducers: (builder) => {
+    builder.addCase(fetchTodos.fulfilled, (state, action) => {
+      return action.payload;
+    });
+  },
 });
 
 export const { addTodo, toggleComplete, removeTodo } = todoSlice.actions;
