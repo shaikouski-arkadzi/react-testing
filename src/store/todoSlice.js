@@ -16,6 +16,34 @@ export const fetchTodos = createAsyncThunk(
   }
 );
 
+export const addTodos = createAsyncThunk(
+  "todos/add",
+  async function (todosText, { rejectWithValue }) {
+    try {
+      const newTodo = {
+        title: todosText,
+        completed: false,
+      };
+
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/todos",
+        {
+          method: "POST",
+          body: JSON.stringify(newTodo),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        }
+      );
+      if (!response.ok) throw new Error("Failed to add todo");
+      const data = await response.json();
+      return { ...newTodo, id: data.id || new Date().toISOString() };
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
 const todoSlice = createSlice({
   name: "todos",
   initialState: [],
