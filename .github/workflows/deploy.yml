@@ -1,4 +1,4 @@
-name: Test React
+name: Deploy React
 on: [workflow_dispatch, push]
 jobs:
     test:
@@ -12,6 +12,7 @@ jobs:
             run: npm run test
     lint:
         runs-on: ubuntu-latest
+        needs: test
         steps:
           - name: Get repo code
             uses: actions/checkout@v5.0.0
@@ -21,6 +22,7 @@ jobs:
             run: npm run lint
     build:
         runs-on: ubuntu-latest
+        needs: lint
         steps:
           - name: Get repo code
             uses: actions/checkout@v5.0.0
