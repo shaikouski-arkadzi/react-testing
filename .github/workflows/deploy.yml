@@ -4,6 +4,11 @@ on:
     push:
         branches:
             - master
+            - "feat/*"
+            - "feat/**"
+            - "!bugfix/*"
+        # branches-ignore:
+            # - "!bugfix/*"
         # paths-ignore:
             # - '.github/workflows/*'
 jobs:
