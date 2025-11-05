@@ -9,6 +9,8 @@ on:
             - "!bugfix/*"
         # branches-ignore:
             # - "!bugfix/*"
+        # paths:
+            # - '**.js'
         # paths-ignore:
             # - '.github/workflows/*'
 jobs:
