@@ -14,3 +14,7 @@ jobs:
         run: |
           echo First
           echo Second
+      - name: SHA Commit
+        run: echo $GITHUB_SHA
+      - name: branch commit
+        run: echo $GITHUB_REF
