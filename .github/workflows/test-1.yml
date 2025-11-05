@@ -1,5 +1,9 @@
 name: Test 1 Workflow
-on: workflow_dispatch
+on: 
+  workflow_run:
+    workflows: [Deploy React]
+    types:
+      - completed
 jobs:
   print:
     runs-on: ubuntu-latest
