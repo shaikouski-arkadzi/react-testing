@@ -1,0 +1,13 @@
+name: If pass Workflow
+on: 
+  workflow_run:
+    workflows: [Deploy React]
+    types:
+      - completed
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Print to console
+        run: echo "Success"
