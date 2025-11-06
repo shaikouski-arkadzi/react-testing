@@ -1,6 +1,12 @@
 name: Print context
 on: 
   workflow_dispatch:
+    inputs:
+      titleCustom:
+        description: Type the title
+        type: string
+        required: true
+        default: "Hello"
   pull_request:
     types: [opened, edited, reopened]
     branches:
