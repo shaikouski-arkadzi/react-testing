@@ -17,3 +17,5 @@ jobs:
     steps:
       - name: Print context
         run: echo "${{ toJSON(github) }}"
+      - name: Print input value
+        run: echo "Title ${{ inputs.titleCustom }}"
