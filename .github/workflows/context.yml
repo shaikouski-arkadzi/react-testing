@@ -15,6 +15,10 @@ on:
           - Value 1
           - Value 2
         default: "Value 2"
+      checkboxCustom:
+        description: Select check
+        type: boolean
+        required: false
   pull_request:
     types: [opened, edited, reopened]
     branches:
