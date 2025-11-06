@@ -33,3 +33,5 @@ jobs:
         run: echo "Title ${{ inputs.titleCustom }}"
       - name: Print select value
         run: echo "Select ${{ inputs.selectCustom }}"
+      - name: Print checkbox value
+        run: echo "Select ${{ inputs.checkboxCustom }}"
