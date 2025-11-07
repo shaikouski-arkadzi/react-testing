@@ -29,9 +29,15 @@ jobs:
     steps:
       - name: Print context
         run: echo "${{ toJSON(github) }}"
+      - name: Print runner
+        run: echo "${{ toJSON(runner) }}"
+      - name: Print job
+        run: echo "${{ toJSON(job) }}"
+      - name: Print steps
+        run: echo "${{ toJSON(steps) }}"
       - name: Print input value
         run: echo "Title ${{ inputs.titleCustom }}"
       - name: Print select value
         run: echo "Select ${{ inputs.selectCustom }}"
       - name: Print checkbox value
-        run: echo "Select ${{ inputs.checkboxCustom }}"
+        run: echo "Checkbox ${{ inputs.checkboxCustom }}"
