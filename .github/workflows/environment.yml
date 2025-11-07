@@ -16,3 +16,7 @@ jobs:
           echo "${{ env.GH_SECRET }}"
       - name: Get variable from first step
         run: echo "${{ env.NEW_CUSTOM_VAR }}"
+      - name: Set env in step
+        env:
+          NODE_ENV: dev
+        run: echo "${{ env.NODE_ENV }}"
