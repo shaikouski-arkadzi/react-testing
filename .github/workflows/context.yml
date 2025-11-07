@@ -23,6 +23,7 @@ on:
     types: [opened, edited, reopened]
     branches:
       - master
+run-name: "Display Context Info"
 jobs:
   print:
     runs-on: ubuntu-latest
