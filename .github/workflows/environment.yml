@@ -8,7 +8,11 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
+      - name: Set variable for next step
+        run: echo "NEW_CUSTOM_VAR=New value" >> "$GITHUB_ENV"
       - name: Print env
         run: |
           echo "${{ env.NODE_ENV }}"
           echo "${{ env.GH_SECRET }}"
+      - name: Get variable from first step
+        run: echo "${{ env.NEW_CUSTOM_VAR }}"
