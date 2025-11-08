@@ -20,7 +20,12 @@ jobs:
         if: ${{ success() }}
         run: echo "success"
       - name: Fail exit
+        id: error-step
         run: exit 1
+      - name: Runs on failure needed step
+      # true если конкретный шаг провалился
+        if: ${{ failure() && steps.error-step.conclusion=='failure' }}
+        run: echo "failure"
       - name: Just step
         run: echo "step"
       - name: Runs on failure
