@@ -1,0 +1,13 @@
+name: Functions
+on: 
+  workflow_dispatch:
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Timeout
+        run: sleep 20
+      - name: Runs on canceled
+      # true если была произведена отмена работы
+        if: ${{ cancelled() }}
+        run: echo "canceled"
