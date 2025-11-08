@@ -15,3 +15,15 @@ jobs:
       # true в любом случае
         if: ${{ always() }}
         run: echo "always"
+      - name: Runs on success
+      # success если предыдущая работа была завершена успешно
+        if: ${{ success() }}
+        run: echo "success"
+      - name: Fail exit
+        run: exit 1
+      - name: Just step
+        run: echo "step"
+      - name: Runs on failure
+      # true при провале одного из предыдущего шага
+        if: ${{ failure() }}
+        run: echo "failure"
