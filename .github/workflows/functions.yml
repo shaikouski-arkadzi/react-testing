@@ -5,9 +5,13 @@ jobs:
   job:
     runs-on: ubuntu-latest
     steps:
-      - name: Timeout
-        run: sleep 20
+      # - name: Timeout
+        # run: sleep 20
       - name: Runs on canceled
       # true если была произведена отмена работы
         if: ${{ cancelled() }}
         run: echo "canceled"
+      - name: Runs on always
+      # true в любом случае
+        if: ${{ always() }}
+        run: echo "always"
