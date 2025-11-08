@@ -7,6 +7,7 @@ env:
 jobs:
   print:
     runs-on: ubuntu-latest
+    environment: "production"
     steps:
       - name: Set variable for next step
         run: echo "NEW_CUSTOM_VAR=New value" >> "$GITHUB_ENV"
@@ -20,3 +21,9 @@ jobs:
         env:
           NODE_ENV: dev
         run: echo "${{ env.NODE_ENV }}"
+      - name: Get variable
+        run: echo "${{ vars.DEPLOY_VAR }}"
+      - name: Get variable environment
+        run: echo "${{ vars.PRODUCTION_VAR }}"
+      - name: Get secret environment
+        run: echo "${{ secrets.PRODUCTION_SECRET }}"
