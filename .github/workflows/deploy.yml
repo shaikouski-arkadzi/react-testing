@@ -51,6 +51,8 @@ jobs:
             os: [ubuntu-latest]
           # продолжаем выполнять другие атрицы если одна зафейлилась. Иначе они все прервутся
           fail-fast: false
+          # сколько вариаций может выполняться одновременно
+          max-parallel: 1
         runs-on: ${{ matrix.os }}
         steps:
           - name: Get repo code
