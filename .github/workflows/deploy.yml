@@ -77,12 +77,12 @@ jobs:
             uses: actions/upload-artifact@v5.0.0
             with:
               path: dist
-              name: build-files
+              name: build-files-${{ matrix.os }}-node${{ matrix.node-version }}
     deploy:
       needs: build
       runs-on: ubuntu-latest
       steps:
         - name: Get build project
           uses: actions/download-artifact@v6.0.0
-          with:
-            name: build-files
+          # with:
+            # name: build-files
