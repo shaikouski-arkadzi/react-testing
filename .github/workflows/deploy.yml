@@ -49,6 +49,9 @@ jobs:
           matrix:
             node-version: [22]
             os: [ubuntu-latest]
+            include: 
+              - os: macos-latest
+                node-version: 21
           # продолжаем выполнять другие атрицы если одна зафейлилась. Иначе они все прервутся
           fail-fast: false
           # сколько вариаций может выполняться одновременно
