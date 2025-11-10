@@ -17,6 +17,8 @@ jobs:
     test:
         runs-on: ubuntu-latest
         steps:
+          - name: Get repo code
+            uses: actions/checkout@v5.0.0
           - name: Use custom action
             uses: ./.github/actions/cache-node-modules
           - name: Test app
