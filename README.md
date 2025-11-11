@@ -159,4 +159,8 @@ npx eslint --fix .
 
 Если ESLint запущен в фоновом режиме (например, в редакторе), перезапустите его.
 
-Теперь `expect`, `test`, `describe` и другие функции Vitest не будут вызывать ошибки в ESLint. 🚀
+Теперь `expect`, `test`, `describe` и другие функции Vitest не будут вызывать ошибки в ESLint. 
+
+## Workflow status badge
+
+<img src="https://github.com/shaikouski-arkadzi/react-testing/actions/workflows/deploy.yml/badge.svg?branch=main" />
