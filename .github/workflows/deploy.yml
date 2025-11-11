@@ -20,9 +20,12 @@ jobs:
           - name: Get repo code
             uses: actions/checkout@v5.0.0
           - name: Use custom action
+            id: cache_node_modules
             uses: ./.github/actions/cache-node-modules
             with:
               caching: 'false'
+          - name: Show output from custom action
+            run: echo "Status from action:${{ steps.cache_node_modules.outputs.status }}"
           - name: Test app
             run: npm run test
     lint:
