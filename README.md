@@ -163,4 +163,4 @@ npx eslint --fix .
 
 ## Workflow status badge
 
-<img src="https://github.com/shaikouski-arkadzi/react-testing/actions/workflows/deploy.yml/badge.svg?branch=main" />
+<img src="https://github.com/shaikouski-arkadzi/react-testing/actions/workflows/deploy.yml/badge.svg" />
