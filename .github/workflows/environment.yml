@@ -1,7 +1,9 @@
 name: Environment
 on: 
   workflow_dispatch:
-concurrency: environment
+concurrency: 
+  group: environment
+  cancel-in-progress: true
 env:
   NODE_ENV: production
   GH_SECRET: ${{ secrets.DEPLOY_SECRET }}
